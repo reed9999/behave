@@ -14,6 +14,21 @@ in `behave`_.
 
 Providing a Fixture
 -------------------
+You already know that behave tests consist of features implemented in Python 
+by steps; 
+fixtures are applied at the feature level 
+.. (for a step, scenario, or even an 
+.. entire feature) 
+and implemented in a Python script. By convention this script can be a 
+standalone ``fixtures.py`` in the project root or in the ``environment.py``. 
+In addition, fixtures require a bit more 
+code as plumbing to relate the tag of the feature (i.
+e., its) to the Python function implementing it.
+
+In this example, we want to create two features to allow easy invocation of
+either Firefox or Chrome. Whichever browser is involked will be stored as 
+the context variable named ``browser``.
+
 
 .. code-block:: python
 
